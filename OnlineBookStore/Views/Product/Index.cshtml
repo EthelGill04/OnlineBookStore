@@ -1,0 +1,47 @@
+﻿@model List<Product>
+@{
+}
+<h2 class="text-center mb-5">List of Products</h2>
+    <div class="mb-5">
+        <div class="col">
+            <a class="btn btn-primary" asp-controller="Product" asp-action="Create">New Product</a>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <table class="table">
+        <thead>
+             <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Author</th>
+                    <th>Publish Date</th>
+                    <th>Genre</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                    <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var product in Model)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Title</td>
+                    <td>@product.Description</td>
+                    <td>@product.Author</td>
+                    <td>@product.DatePublished.ToString("dd/MM/yyyy")</td>
+                    <td>@product.Genre</td>
+                    <td><img src="./img/@product.Image" width="100" alt="img" /></td>
+                    <td>@(product.Price)$</td>
+                    <td style="white-space:nowrap">
+                        <a class="btn btn-dark" asp-controller="Products" asp-action="Edit"
+                        asp-route-id="@product.Id">Edit</a>
+                        <a class="btn btn-danger" asp-controller="Products" asp-action="Delete"
+                           asp-route-id="@product.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
