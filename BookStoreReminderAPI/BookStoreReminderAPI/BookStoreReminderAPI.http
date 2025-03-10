@@ -1,0 +1,6 @@
+@BookStoreReminderAPI_HostAddress = http://localhost:5053
+
+GET {{BookStoreReminderAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

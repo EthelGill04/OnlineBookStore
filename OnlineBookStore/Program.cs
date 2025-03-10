@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using OnlineBookStore.Services;
 
 namespace OnlineBookStore
@@ -17,6 +18,18 @@ namespace OnlineBookStore
                 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
                 options.UseSqlServer(connectionString);
             });
+
+            builder.Services.AddHttpClient("OnlineBookStoreAPI", client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7256/api/Books"); // Update this URL if deployed
+            });
+
+            builder.Services.AddHttpClient("OnlineBookStoreAPI", client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7256/api/Books/borrow"); // Update this URL if deployed
+            });
+
+            builder.Services.AddScoped<BookService>();
 
             var app = builder.Build();
 

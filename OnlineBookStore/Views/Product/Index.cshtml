@@ -36,9 +36,9 @@
                     <td><img src="./img/@product.Image" width="100" alt="img" /></td>
                     <td>@(product.Price)$</td>
                     <td style="white-space:nowrap">
-                        <a class="btn btn-dark" asp-controller="Products" asp-action="Edit"
+                        <a class="btn btn-dark" asp-controller="Product" asp-action="Edit"
                         asp-route-id="@product.Id">Edit</a>
-                        <a class="btn btn-danger" asp-controller="Products" asp-action="Delete"
+                        <a class="btn btn-danger" asp-controller="Product" asp-action="Delete"
                            asp-route-id="@product.Id">Delete</a>
                     </td>
                 </tr>

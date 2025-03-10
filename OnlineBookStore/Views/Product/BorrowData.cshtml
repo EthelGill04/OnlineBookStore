@@ -1,0 +1,38 @@
+﻿@page
+@model Index1Model
+@{
+    ViewData["Title"] = "Online Book Store";
+}
+
+<h2>Available Books</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">@TempData["Message"]</div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>
+                    <form method="post">
+                        <input type="hidden" name="bookId" value="@book.Id" />
+                        <input type="email" name="email" placeholder="Enter your email" required />
+                        <button type="submit" class="btn btn-primary">Borrow</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wajiz.pk\\source\\repos\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj": {}
+    "C:\\Users\\Wajiz.pk\\OneDrive\\Desktop\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wajiz.pk\\source\\repos\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj": {
+    "C:\\Users\\Wajiz.pk\\OneDrive\\Desktop\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wajiz.pk\\source\\repos\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj",
+        "projectUniqueName": "C:\\Users\\Wajiz.pk\\OneDrive\\Desktop\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj",
         "projectName": "OnlineBookStore",
-        "projectPath": "C:\\Users\\Wajiz.pk\\source\\repos\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj",
+        "projectPath": "C:\\Users\\Wajiz.pk\\OneDrive\\Desktop\\OnlineBookStore\\OnlineBookStore\\OnlineBookStore.csproj",
         "packagesPath": "C:\\Users\\Wajiz.pk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wajiz.pk\\source\\repos\\OnlineBookStore\\OnlineBookStore\\obj\\",
+        "outputPath": "C:\\Users\\Wajiz.pk\\OneDrive\\Desktop\\OnlineBookStore\\OnlineBookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wajiz.pk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
             }
